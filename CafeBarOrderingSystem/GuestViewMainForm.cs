@@ -10,11 +10,14 @@ using System.Windows.Forms;
 
 namespace CafeBarOrderingSystem
 {
-    public partial class Form1 : Form
+    public partial class GuestViewMainForm : Form
     {
-        public Form1()
+        public GuestViewMainForm()
         {
             InitializeComponent();
+            WindowState = FormWindowState.Maximized;
+            MaximizeBox = false;
+            FormBorderStyle = FormBorderStyle.FixedDialog;
         }
     }
 }
