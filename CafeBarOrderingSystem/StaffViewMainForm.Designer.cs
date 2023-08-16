@@ -29,12 +29,86 @@ namespace CafeBarOrderingSystem
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.addProductsMenuBtn = new System.Windows.Forms.ToolStripMenuItem();
+            this.finishedOrdersMenuBtn = new System.Windows.Forms.ToolStripMenuItem();
+            this.earningsMenuBtn = new System.Windows.Forms.ToolStripMenuItem();
+            this.layoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.productsMenuBtn = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addProductsMenuBtn,
+            this.finishedOrdersMenuBtn,
+            this.earningsMenuBtn,
+            this.productsMenuBtn});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // addProductsMenuBtn
+            // 
+            this.addProductsMenuBtn.Name = "addProductsMenuBtn";
+            this.addProductsMenuBtn.Size = new System.Drawing.Size(107, 24);
+            this.addProductsMenuBtn.Text = "Add product";
+            // 
+            // finishedOrdersMenuBtn
+            // 
+            this.finishedOrdersMenuBtn.Name = "finishedOrdersMenuBtn";
+            this.finishedOrdersMenuBtn.Size = new System.Drawing.Size(125, 24);
+            this.finishedOrdersMenuBtn.Text = "Finished Orders";
+            // 
+            // earningsMenuBtn
+            // 
+            this.earningsMenuBtn.Name = "earningsMenuBtn";
+            this.earningsMenuBtn.Size = new System.Drawing.Size(142, 24);
+            this.earningsMenuBtn.Text = "Earnings overview";
+            // 
+            // layoutPanel
+            // 
+            this.layoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layoutPanel.Location = new System.Drawing.Point(0, 28);
+            this.layoutPanel.Name = "layoutPanel";
+            this.layoutPanel.Size = new System.Drawing.Size(800, 422);
+            this.layoutPanel.TabIndex = 1;
+            // 
+            // productsMenuBtn
+            // 
+            this.productsMenuBtn.Name = "productsMenuBtn";
+            this.productsMenuBtn.Size = new System.Drawing.Size(116, 24);
+            this.productsMenuBtn.Text = "View Products";
+            this.productsMenuBtn.Click += new System.EventHandler(this.productsMenuBtn_Click);
+            // 
+            // StaffViewMainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.layoutPanel);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
+            this.Name = "StaffViewMainForm";
             this.Text = "StaffViewMainForm";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem addProductsMenuBtn;
+        private System.Windows.Forms.ToolStripMenuItem finishedOrdersMenuBtn;
+        private System.Windows.Forms.ToolStripMenuItem earningsMenuBtn;
+        private System.Windows.Forms.FlowLayoutPanel layoutPanel;
+        private System.Windows.Forms.ToolStripMenuItem productsMenuBtn;
     }
 }

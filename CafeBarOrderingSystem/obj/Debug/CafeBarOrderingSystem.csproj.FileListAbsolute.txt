@@ -9,3 +9,4 @@ C:\Users\HP\Desktop\FINKI\II - Semestar 4\VizuelnoProgramiranje\CafeBarOrderingS
 C:\Users\HP\Desktop\FINKI\II - Semestar 4\VizuelnoProgramiranje\CafeBarOrderingSystem\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.exe
 C:\Users\HP\Desktop\FINKI\II - Semestar 4\VizuelnoProgramiranje\CafeBarOrderingSystem\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.pdb
 C:\Users\HP\Desktop\FINKI\II - Semestar 4\VizuelnoProgramiranje\CafeBarOrderingSystem\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.GuestViewMainForm.resources
+C:\Users\HP\Desktop\FINKI\II - Semestar 4\VizuelnoProgramiranje\CafeBarOrderingSystem\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.StaffViewMainForm.resources

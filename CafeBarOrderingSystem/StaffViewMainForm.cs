@@ -24,6 +24,32 @@ namespace CafeBarOrderingSystem
              *Order class - attributes: Order wait time, order total price, order finished/pending, list items, table nr, comment
              *Item class - attributes: Name of product, price, id
             */
+
         }
+        public void AddOrderToPanel(Order order)
+        {
+            ListView newOrder = new ListView();
+            newOrder.Width = 500;
+            newOrder.Height = 500;
+            newOrder.Items.Add(order.ToString());
+            layoutPanel.Controls.Add(newOrder);
+        }
+
+        private void productsMenuBtn_Click(object sender, EventArgs e)
+        {
+            ProductsView view = new ProductsView();
+            Order newOrder = new Order();
+            ProductRow row = new ProductRow(view.getProduct(),5,"Ohne zwiebeln");
+            newOrder.productRow.Add(row);
+            AddOrderToPanel(newOrder);
+        }
+        /*public MarkOrderDone()
+{
+
+}
+public DeleteOrderFromPanel()
+{
+
+}*/
     }
 }
