@@ -11,9 +11,11 @@ namespace CafeBarOrderingSystem
         public List<ProductRow> productRow = new List<ProductRow>();
         public int TotalWaitTime { get; set; }
         public double TotalPrice { get; set; }
+
+        public System.Windows.Forms.ListViewItem footer { get; set; }
         public Order()
         {
-            //Nothing really necessary in constructor
+            footer = new System.Windows.Forms.ListViewItem();
         }
 
         public override string ToString()

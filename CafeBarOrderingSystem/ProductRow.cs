@@ -8,9 +8,9 @@ namespace CafeBarOrderingSystem
 {
     public class ProductRow
     {
-        Product product;
-        int quantity;
-        string description;
+        public Product product;
+        public int quantity;
+        public string description;
 
         public ProductRow(Product product, int quantity, string description)
         {
@@ -21,7 +21,7 @@ namespace CafeBarOrderingSystem
 
         public override string ToString()
         {
-            return $"{product}\t{quantity}\n{description}\n";
+            return $"{product.ToString()}\t{quantity}\n{description}\n";
         }
     }
 }
