@@ -18,21 +18,5 @@ namespace CafeBarOrderingSystem
             footer = new System.Windows.Forms.ListViewItem();
         }
 
-        public override string ToString()
-        {
-            StringBuilder sb = new StringBuilder();
-
-            sb.AppendLine("Products:");
-            foreach (ProductRow row in productRow)
-            {
-                sb.AppendLine($"- {row}");
-            }
-
-            sb.AppendLine($"Total Wait Time: {TotalWaitTime}");
-            sb.AppendLine($"Total Price: {TotalPrice:C}"); // Format as currency
-
-            return sb.ToString();
-        }
-
     }
 }

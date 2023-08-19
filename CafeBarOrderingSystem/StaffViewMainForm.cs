@@ -13,6 +13,7 @@ namespace CafeBarOrderingSystem
     public partial class StaffViewMainForm : Form
     {
         public List<Order> currentOrders = new List<Order>(); //Current pending orders | order format
+        public ProductsView AvailableProducts = new ProductsView();
         public Timer timer;
         public StaffViewMainForm()
         {
@@ -60,6 +61,11 @@ namespace CafeBarOrderingSystem
             ListView newOrderListView = new ListView();
             newOrderListView.View = View.Details;
 
+            foreach (ProductRow row in order.productRow)
+            {
+                order.TotalPrice += row.quantity * row.product.price;
+            }   //Setting total price to be paid on the order
+
             // Add columns to the ListView
             newOrderListView.Columns.Add("Product");
             newOrderListView.Columns.Add("Quantity");
@@ -80,11 +86,11 @@ namespace CafeBarOrderingSystem
 
 
             ListViewItem footer = new ListViewItem($"Pending: {order.TotalWaitTime}sec");
-            order.footer.SubItems.Add("");
-            order.footer.SubItems.Add("");
-            order.footer.SubItems.Add($"Total: {order.TotalPrice} $");
-            newOrderListView.Items.Add(order.footer);
-            //order.footer = footer;
+            footer.SubItems.Add("");
+            footer.SubItems.Add("");
+            footer.SubItems.Add($"Total: {order.TotalPrice} $");
+            newOrderListView.Items.Add(footer);
+            order.footer = footer;
 
             AutoResizeListViewColumns(newOrderListView);
             newOrderListView.Columns[1].Width = 70;
@@ -99,36 +105,38 @@ namespace CafeBarOrderingSystem
 
             newOrderListView.Scrollable = false;
             layoutPanel.Controls.Add(newOrderListView);
-            //updateOrders();
         }
-
-        private void productsMenuBtn_Click(object sender, EventArgs e)
-        {
-            timer.Start();
-            ProductsView view = new ProductsView();
-            Order newOrder = new Order();
-            newOrder.productRow.Add(new ProductRow(view.getProduct(), 5, "Ohne zwiebeln"));
-            newOrder.productRow.Add(new ProductRow(new Product("Chaj", 12.5), 3, "Ohne zucker"));
-            newOrder.productRow.Add(new ProductRow(new Product("Zehneins", 15.5), 5, "Ohne zwiebeln"));
-            currentOrders.Add(newOrder);
-        }
-        /*public void updateOrders()
-        {
-            layoutPanel.Controls.Clear();
-            foreach(ListView lv in currentOrders)
-            {
-                layoutPanel.Controls.Add(lv);
-            }
-        }*/
         void Timer_Tick(object sender, EventArgs e)
         {
             foreach (Order order in currentOrders)
             {
                 order.TotalWaitTime++;
-                ////UNHANDLED EXCEPTION INDEX OUT OF BOUNDS (Possible soluton - find another way to access subitems)
                 // Update the text of the existing subitems in the footer ListViewItem
                 order.footer.SubItems[0].Text = $"Pending: {order.TotalWaitTime}sec";
-                order.footer.SubItems[2].Text = $"Total: {order.TotalPrice} $";
+                order.footer.SubItems[3].Text = $"Total: {order.TotalPrice} $";
+            }
+        }
+
+        ///////////////////MENU BUTTONS////////////////////////////////
+        private void productsMenuBtn_Click(object sender, EventArgs e)
+        {
+            AvailableProducts.DisplayOrders();
+            AvailableProducts.Show();
+        }
+
+        private void addProductsMenuBtn_Click(object sender, EventArgs e)
+        {
+            using (AddProductForm addProductForm = new AddProductForm())
+            {
+                if (addProductForm.ShowDialog() == DialogResult.OK)
+                {
+                    Product newProduct = addProductForm.NewProduct;
+                    if (!AvailableProducts.availableProducts.Contains(newProduct))
+                    {
+                        AvailableProducts.hasChanges = true;
+                        AvailableProducts.availableProducts.Add(newProduct);
+                    }
+                }
             }
         }
 

@@ -18,10 +18,5 @@ namespace CafeBarOrderingSystem
             this.quantity = quantity;
             this.description = description;
         }
-
-        public override string ToString()
-        {
-            return $"{product.ToString()}\t{quantity}\n{description}\n";
-        }
     }
 }

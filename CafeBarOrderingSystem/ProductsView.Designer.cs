@@ -29,12 +29,34 @@ namespace CafeBarOrderingSystem
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.lvProducts = new System.Windows.Forms.ListView();
+            this.SuspendLayout();
+            // 
+            // lvProducts
+            // 
+            this.lvProducts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvProducts.HideSelection = false;
+            this.lvProducts.Location = new System.Drawing.Point(0, 0);
+            this.lvProducts.Name = "lvProducts";
+            this.lvProducts.Size = new System.Drawing.Size(463, 450);
+            this.lvProducts.TabIndex = 0;
+            this.lvProducts.UseCompatibleStateImageBehavior = false;
+            // 
+            // ProductsView
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(463, 450);
+            this.Controls.Add(this.lvProducts);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "ProductsView";
             this.Text = "ProductsView";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ListView lvProducts;
     }
 }
