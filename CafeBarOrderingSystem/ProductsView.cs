@@ -35,6 +35,7 @@ namespace CafeBarOrderingSystem
             if (hasChanges)
             {
                 hasChanges = false;
+                lvProducts.Items.Clear();
                 foreach (Product product in availableProducts)
                 {
                     ListViewItem item = new ListViewItem(product.name);
