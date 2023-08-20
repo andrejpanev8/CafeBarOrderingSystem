@@ -12,3 +12,4 @@ C:\Users\HP\Desktop\FINKI\II - Semestar 4\VizuelnoProgramiranje\CafeBarOrderingS
 C:\Users\HP\Desktop\FINKI\II - Semestar 4\VizuelnoProgramiranje\CafeBarOrderingSystem\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.StaffViewMainForm.resources
 C:\Users\HP\Desktop\FINKI\II - Semestar 4\VizuelnoProgramiranje\CafeBarOrderingSystem\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.AddProductForm.resources
 C:\Users\HP\Desktop\FINKI\II - Semestar 4\VizuelnoProgramiranje\CafeBarOrderingSystem\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.ProductsView.resources
+C:\Users\HP\Desktop\FINKI\II - Semestar 4\VizuelnoProgramiranje\CafeBarOrderingSystem\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.FinishedOrders.resources
