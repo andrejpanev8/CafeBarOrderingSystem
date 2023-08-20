@@ -8,10 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-/// <summary>
-/// Everything fixed-up - next move to finishing an order.
-/// </summary>
-
 namespace CafeBarOrderingSystem
 {
     public partial class ProductsView : Form

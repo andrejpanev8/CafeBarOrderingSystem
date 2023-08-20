@@ -14,6 +14,7 @@ namespace CafeBarOrderingSystem
     {
         public List<Order> currentOrders = new List<Order>(); //Current pending orders | order format
         public ProductsView AvailableProducts = new ProductsView();
+        public FinishedOrders FinishedOrders = new FinishedOrders();
         public Timer timer;
         public StaffViewMainForm()
         {
@@ -27,9 +28,17 @@ namespace CafeBarOrderingSystem
             timer = new System.Windows.Forms.Timer();
             timer.Tick += Timer_Tick;
             timer.Interval = 1000;
-            //timer.Start();
-        }
+            FinishedOrders.Show();
+            currentOrders.Add(new Order());
+            currentOrders.Add(new Order());
 
+            foreach (Order order in currentOrders)
+            {
+                UpdateOrders(order, false);
+            }
+            timer.Start();
+
+        }
         public void AutoResizeListViewColumns(ListView listView)
         {
             foreach (ColumnHeader column in listView.Columns)
@@ -56,11 +65,8 @@ namespace CafeBarOrderingSystem
             }
         }   //Method to format listview cells width and height
 
-        public void UpdateOrders(Order order)
+        public void CreateOrderListView(Order order, ListView newOrderListView)
         {
-            ListView newOrderListView = new ListView();
-            newOrderListView.View = View.Details;
-
             foreach (ProductRow row in order.productRow)
             {
                 order.TotalPrice += row.quantity * row.product.price;
@@ -93,7 +99,7 @@ namespace CafeBarOrderingSystem
             order.footer = footer;
 
             AutoResizeListViewColumns(newOrderListView);
-            newOrderListView.Columns[1].Width = 70;
+            newOrderListView.Columns[1].Width = 70;     //Shortcut for Quantity column
 
             // Set the ListView width to match the total column widths
             int totalColumnWidths = newOrderListView.Columns.Cast<ColumnHeader>().Sum(column => column.Width);
@@ -104,7 +110,22 @@ namespace CafeBarOrderingSystem
             newOrderListView.Height = totalRowHeights + 50;
 
             newOrderListView.Scrollable = false;
-            layoutPanel.Controls.Add(newOrderListView);
+        }
+
+        public void UpdateOrders(Order order, bool caller)    //caller flag indicates wheter the method is called from
+        {                                                   //guest view or staff view | True - Guest, False - Staff |
+            ListView newOrderListView = new ListView();
+            newOrderListView.View = View.Details;
+            CreateOrderListView(order, newOrderListView);
+
+            if (caller == false)
+            {
+                FinishedOrders.panelFinishedOrders.Controls.Add(newOrderListView);
+            } else
+            { 
+                layoutPanel.Controls.Add(newOrderListView);
+            }
+            
         }
         void Timer_Tick(object sender, EventArgs e)
         {
@@ -138,6 +159,15 @@ namespace CafeBarOrderingSystem
                     }
                 }
             }
+        }
+
+        private void finishedOrdersMenuBtn_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void layoutPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         /*public MarkOrderDone()

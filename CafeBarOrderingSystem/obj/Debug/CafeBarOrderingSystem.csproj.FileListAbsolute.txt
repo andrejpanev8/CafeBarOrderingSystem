@@ -12,3 +12,21 @@ C:\Users\HP\Desktop\FINKI\II - Semestar 4\VizuelnoProgramiranje\CafeBarOrderingS
 C:\Users\HP\Desktop\FINKI\II - Semestar 4\VizuelnoProgramiranje\CafeBarOrderingSystem\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.StaffViewMainForm.resources
 C:\Users\HP\Desktop\FINKI\II - Semestar 4\VizuelnoProgramiranje\CafeBarOrderingSystem\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.AddProductForm.resources
 C:\Users\HP\Desktop\FINKI\II - Semestar 4\VizuelnoProgramiranje\CafeBarOrderingSystem\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.ProductsView.resources
+C:\Users\HP\Desktop\FINKI\II - Semestar 4\VizuelnoProgramiranje\CafeBarOrderingSystem\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.FinishedOrders.resources
+C:\Users\Bace\Source\Repos\CafeBarOrderingSystem_V2\CafeBarOrderingSystem\bin\Debug\CafeBarOrderingSystem.exe.config
+C:\Users\Bace\Source\Repos\CafeBarOrderingSystem_V2\CafeBarOrderingSystem\bin\Debug\CafeBarOrderingSystem.exe
+C:\Users\Bace\Source\Repos\CafeBarOrderingSystem_V2\CafeBarOrderingSystem\bin\Debug\CafeBarOrderingSystem.pdb
+C:\Users\Bace\Source\Repos\CafeBarOrderingSystem_V2\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.csproj.AssemblyReference.cache
+C:\Users\Bace\Source\Repos\CafeBarOrderingSystem_V2\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.csproj.SuggestedBindingRedirects.cache
+C:\Users\Bace\Source\Repos\CafeBarOrderingSystem_V2\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.AddProductForm.resources
+C:\Users\Bace\Source\Repos\CafeBarOrderingSystem_V2\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.FinishedOrders.resources
+C:\Users\Bace\Source\Repos\CafeBarOrderingSystem_V2\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.GuestViewMainForm.resources
+C:\Users\Bace\Source\Repos\CafeBarOrderingSystem_V2\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.MainForm.resources
+C:\Users\Bace\Source\Repos\CafeBarOrderingSystem_V2\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.ProductsView.resources
+C:\Users\Bace\Source\Repos\CafeBarOrderingSystem_V2\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.Properties.Resources.resources
+C:\Users\Bace\Source\Repos\CafeBarOrderingSystem_V2\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.StaffViewMainForm.resources
+C:\Users\Bace\Source\Repos\CafeBarOrderingSystem_V2\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.csproj.GenerateResource.cache
+C:\Users\Bace\Source\Repos\CafeBarOrderingSystem_V2\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.csproj.CoreCompileInputs.cache
+C:\Users\Bace\Source\Repos\CafeBarOrderingSystem_V2\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.exe
+C:\Users\Bace\Source\Repos\CafeBarOrderingSystem_V2\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.pdb
+C:\Users\Bace\Source\Repos\CafeBarOrderingSystem_V2\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.Make_order.resources
