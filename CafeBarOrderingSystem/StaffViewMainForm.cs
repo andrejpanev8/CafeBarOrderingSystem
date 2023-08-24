@@ -165,6 +165,14 @@ namespace CafeBarOrderingSystem
         {
         }
 
+<<<<<<< HEAD
+        private void layoutPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+=======
+>>>>>>> f165c787be891cc56957c126c17986942f68a796
         /*public MarkOrderDone()
 {
 

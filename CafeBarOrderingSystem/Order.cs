@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CafeBarOrderingSystem
 {
     public class Order
     {
         public List<ProductRow> productRow = new List<ProductRow>();
+        //public int tableNumber { get; set; } - we gonna need this 
         public int TotalWaitTime { get; set; }
         public int FinishedWaitTime { get; set; }
         public double TotalPrice { get; set; }
