@@ -70,6 +70,12 @@
     <Compile Include="GuestViewMainForm.Designer.cs">
       <DependentUpon>GuestViewMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Make order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Make order.Designer.cs">
+      <DependentUpon>Make order.cs</DependentUpon>
+    </Compile>
     <Compile Include="Order.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="ProductRow.cs" />
@@ -98,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Make order.resx">
+      <DependentUpon>Make order.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductsView.resx">
       <DependentUpon>ProductsView.cs</DependentUpon>
