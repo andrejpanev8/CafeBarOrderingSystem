@@ -10,6 +10,10 @@ using System.Windows.Forms;
 
 namespace CafeBarOrderingSystem
 {
+    /// <summary>
+    /// Fix up transfer from current orders to finished orders price increases in footer, time/paid changed
+    /// in StaffViewMain instead of finished orders form
+    /// </summary>
     public partial class StaffViewMainForm : Form
     {
         public List<Order> currentOrders = new List<Order>(); //Current pending orders | order format
@@ -27,15 +31,11 @@ namespace CafeBarOrderingSystem
             //Creating a timer to count time for all orders
             timer = new System.Windows.Forms.Timer();
             timer.Tick += Timer_Tick;
+            for (int i = 0; i < 5; i++)                     //Dummy Code
+                currentOrders.Add(new Order());             //Dummy Code
+            foreach (Order cc in currentOrders)
+                UpdateOrders(cc, true);
             timer.Interval = 1000;
-            FinishedOrders.Show();
-            currentOrders.Add(new Order());
-            currentOrders.Add(new Order());
-
-            foreach (Order order in currentOrders)
-            {
-                UpdateOrders(order, false);
-            }
             timer.Start();
 
         }
@@ -63,14 +63,17 @@ namespace CafeBarOrderingSystem
 
                 column.Width = colWidth;
             }
-        }   //Method to format listview cells width and height
+        }
 
         public void CreateOrderListView(Order order, ListView newOrderListView)
         {
+            //################Dummy Code############
+            order.TotalPrice = 0;    //<- Doesn't work
             foreach (ProductRow row in order.productRow)
             {
                 order.TotalPrice += row.quantity * row.product.price;
             }   //Setting total price to be paid on the order
+            //##########################################
 
             // Add columns to the ListView
             newOrderListView.Columns.Add("Product");
@@ -91,12 +94,24 @@ namespace CafeBarOrderingSystem
             newOrderListView.Items.Add(new ListViewItem(""));
 
 
-            ListViewItem footer = new ListViewItem($"Pending: {order.TotalWaitTime}sec");
-            footer.SubItems.Add("");
-            footer.SubItems.Add("");
-            footer.SubItems.Add($"Total: {order.TotalPrice} $");
-            newOrderListView.Items.Add(footer);
-            order.footer = footer;
+            if (order.footer.SubItems[0].Text.StartsWith("Pending:"))
+            {
+                ListViewItem footer = new ListViewItem($"Pending: {order.TotalWaitTime} sec");
+                footer.SubItems.Add("");
+                footer.SubItems.Add("");
+                footer.SubItems.Add($"Total: {order.TotalPrice} $");
+                newOrderListView.Items.Add(footer);
+                order.footer = footer;
+            }
+            else
+            {
+                ListViewItem footer = new ListViewItem($"Finished: {order.TotalWaitTime} sec");
+                footer.SubItems.Add("");
+                footer.SubItems.Add("");
+                footer.SubItems.Add($"Paid: {order.TotalPrice} $");
+                newOrderListView.Items.Add(footer);
+                order.footer = footer;
+            }
 
             AutoResizeListViewColumns(newOrderListView);
             newOrderListView.Columns[1].Width = 70;     //Shortcut for Quantity column
@@ -122,10 +137,40 @@ namespace CafeBarOrderingSystem
             {
                 FinishedOrders.panelFinishedOrders.Controls.Add(newOrderListView);
             } else
-            { 
+            {
+                newOrderListView.Click += ListView_Click;
                 layoutPanel.Controls.Add(newOrderListView);
+                order.lvOrder = newOrderListView;
             }
             
+        }
+        private void ListView_Click(object sender, EventArgs e) //<-better way for selection if possible 
+        {
+            if(sender is ListView selectedListview)
+            {
+                for(int i = 0; i < currentOrders.Count(); i++)
+                {
+                    if (currentOrders[i].lvOrder.Equals(selectedListview))
+                    {
+                        FinishedOrders.MarkFinished(currentOrders[i]);
+                        currentOrders.Remove(currentOrders[i]);
+                        DisplayOrders();
+                    }
+                }
+            }
+        }
+
+        public void DisplayOrders()
+        {
+            layoutPanel.Controls.Clear();   
+            foreach(Order order in currentOrders)
+            {
+                UpdateOrders(order, true);
+            }
+            foreach (Order order in FinishedOrders.finishedOrders)
+            {
+                UpdateOrders(order, false);
+            }
         }
         void Timer_Tick(object sender, EventArgs e)
         {
@@ -133,8 +178,8 @@ namespace CafeBarOrderingSystem
             {
                 order.TotalWaitTime++;
                 // Update the text of the existing subitems in the footer ListViewItem
-                order.footer.SubItems[0].Text = $"Pending: {order.TotalWaitTime}sec";
-                order.footer.SubItems[3].Text = $"Total: {order.TotalPrice} $";
+                order.footer.SubItems[0].Text = $"Pending: {order.TotalWaitTime} sec";
+                //order.footer.SubItems[3].Text = $"Total: {order.TotalPrice} $";
             }
         }
 
@@ -163,16 +208,17 @@ namespace CafeBarOrderingSystem
 
         private void finishedOrdersMenuBtn_Click(object sender, EventArgs e)
         {
+            FinishedOrders.Show();
+            FinishedOrders.panelFinishedOrders.Controls.Clear();
+            foreach (Order order in FinishedOrders.finishedOrders)
+            {
+                UpdateOrders(order, false);
+            }
         }
-
-<<<<<<< HEAD
         private void layoutPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
-=======
->>>>>>> f165c787be891cc56957c126c17986942f68a796
         /*public MarkOrderDone()
 {
 

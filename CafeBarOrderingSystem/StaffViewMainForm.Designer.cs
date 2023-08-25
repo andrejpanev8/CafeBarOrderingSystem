@@ -48,71 +48,46 @@ namespace CafeBarOrderingSystem
             this.productsMenuBtn});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-<<<<<<< HEAD
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(600, 24);
-=======
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
->>>>>>> f165c787be891cc56957c126c17986942f68a796
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // addProductsMenuBtn
             // 
             this.addProductsMenuBtn.Name = "addProductsMenuBtn";
-<<<<<<< HEAD
             this.addProductsMenuBtn.Size = new System.Drawing.Size(86, 20);
-=======
-            this.addProductsMenuBtn.Size = new System.Drawing.Size(107, 24);
->>>>>>> f165c787be891cc56957c126c17986942f68a796
             this.addProductsMenuBtn.Text = "Add product";
             this.addProductsMenuBtn.Click += new System.EventHandler(this.addProductsMenuBtn_Click);
             // 
             // finishedOrdersMenuBtn
             // 
             this.finishedOrdersMenuBtn.Name = "finishedOrdersMenuBtn";
-<<<<<<< HEAD
             this.finishedOrdersMenuBtn.Size = new System.Drawing.Size(101, 20);
-=======
-            this.finishedOrdersMenuBtn.Size = new System.Drawing.Size(125, 24);
->>>>>>> f165c787be891cc56957c126c17986942f68a796
             this.finishedOrdersMenuBtn.Text = "Finished Orders";
             this.finishedOrdersMenuBtn.Click += new System.EventHandler(this.finishedOrdersMenuBtn_Click);
             // 
             // earningsMenuBtn
             // 
             this.earningsMenuBtn.Name = "earningsMenuBtn";
-<<<<<<< HEAD
             this.earningsMenuBtn.Size = new System.Drawing.Size(114, 20);
-=======
-            this.earningsMenuBtn.Size = new System.Drawing.Size(142, 24);
->>>>>>> f165c787be891cc56957c126c17986942f68a796
             this.earningsMenuBtn.Text = "Earnings overview";
             // 
             // productsMenuBtn
             // 
             this.productsMenuBtn.Name = "productsMenuBtn";
-<<<<<<< HEAD
-            this.productsMenuBtn.Size = new System.Drawing.Size(94, 20);
-=======
             this.productsMenuBtn.Size = new System.Drawing.Size(116, 24);
->>>>>>> f165c787be891cc56957c126c17986942f68a796
             this.productsMenuBtn.Text = "View Products";
             this.productsMenuBtn.Click += new System.EventHandler(this.productsMenuBtn_Click);
             // 
             // layoutPanel
             // 
             this.layoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-<<<<<<< HEAD
             this.layoutPanel.Location = new System.Drawing.Point(0, 24);
             this.layoutPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.layoutPanel.Name = "layoutPanel";
             this.layoutPanel.Size = new System.Drawing.Size(600, 342);
-=======
-            this.layoutPanel.Location = new System.Drawing.Point(0, 28);
-            this.layoutPanel.Name = "layoutPanel";
-            this.layoutPanel.Size = new System.Drawing.Size(800, 422);
->>>>>>> f165c787be891cc56957c126c17986942f68a796
+
             this.layoutPanel.TabIndex = 1;
             this.layoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.layoutPanel_Paint);
             // 

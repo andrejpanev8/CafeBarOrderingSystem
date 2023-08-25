@@ -33,3 +33,4 @@ C:\Users\Bace\Source\Repos\CafeBarOrderingSystem_V2\CafeBarOrderingSystem\obj\De
 C:\Users\Bace\Source\Repos\CafeBarOrderingSystem_V2\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.Make_order.resources
 =======
 >>>>>>> f165c787be891cc56957c126c17986942f68a796
+C:\Users\HP\Desktop\FINKI\II - Semestar 4\VizuelnoProgramiranje\CafeBarOrderingSystem\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.Make_order.resources

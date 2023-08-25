@@ -13,7 +13,6 @@ namespace CafeBarOrderingSystem
     public partial class FinishedOrders : Form
     {
         /// <summary>
-        /// Fix-up finished orders windows (mustn't be resizable, some background logic tweaks must be made)
         /// Finished Orders tweak time passed after finishing -> could impact update orders method in staffView.cs
         /// Check lists formatting, adding removing
         /// Figure out a way to select an 'order' in order to mark it as finished <- hard shit probably (arrows selection enter=mark myb)
@@ -24,8 +23,29 @@ namespace CafeBarOrderingSystem
         {
             InitializeComponent();
             Controls.Add(panelFinishedOrders);
+            panelFinishedOrders.AutoScroll = true;
             panelFinishedOrders.Dock = DockStyle.Fill;
             panelFinishedOrders.FlowDirection = FlowDirection.LeftToRight;
+            WindowState = FormWindowState.Maximized;
+        }
+        public void MarkFinished(Order order)
+        {
+            panelFinishedOrders.Controls.Clear();
+            order.footer.SubItems[0].Text = $"";
+            finishedOrders.Add(order);
+
+        }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+
+            // Check if the reason for closing is the user clicking the close button (X)
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                // Hide the form instead of disposing it
+                this.Hide();
+                e.Cancel = true;
+            }
         }
     }
 }
