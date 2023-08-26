@@ -13,9 +13,8 @@ namespace CafeBarOrderingSystem
     public partial class FinishedOrders : Form
     {
         /// <summary>
-        /// Finished Orders tweak time passed after finishing -> could impact update orders method in staffView.cs
-        /// Check lists formatting, adding removing
-        /// Figure out a way to select an 'order' in order to mark it as finished <- hard shit probably (arrows selection enter=mark myb)
+        /// Figure out a way to select an 'order' in order to mark it as finished <- probably hard (arrows selection enter=mark myb)
+        /// Selection by click until better solution found
         /// </summary>
         public List<Order> finishedOrders = new List<Order>();
         public FlowLayoutPanel panelFinishedOrders = new FlowLayoutPanel();

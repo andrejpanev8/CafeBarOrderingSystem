@@ -15,8 +15,10 @@ namespace CafeBarOrderingSystem
 
         public System.Windows.Forms.ListView lvOrder { get; set; }
         public System.Windows.Forms.ListViewItem footer { get; set; }
-        public Order()  //< - Must receive a list od product rows, will remain empty until guest making order done
+        public Order(List<ProductRow> productRow)  //< - Must receive a list od product rows
         {
+            foreach (ProductRow row in productRow)
+                this.productRow.Add(row);
 
             foreach (ProductRow row in productRow)
             {
@@ -28,11 +30,6 @@ namespace CafeBarOrderingSystem
             footer.SubItems.Add("");
             footer.SubItems.Add("");
             footer.SubItems.Add($"Total: {TotalPrice} $");
-
-            productRow.Add(new ProductRow(new Product("Apple", 25), 5, "Nothing really"));
-            productRow.Add(new ProductRow(new Product("Jajce", 15), 87, "Ohne Zwiebeln"));
-            productRow.Add(new ProductRow(new Product("Kaopeira", 13.4), 11, "MAndoera"));
-            productRow.Add(new ProductRow(new Product("Zehneins", 12), 2, "add sauce"));
         }
 
     }

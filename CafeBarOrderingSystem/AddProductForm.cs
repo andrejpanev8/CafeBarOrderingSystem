@@ -21,13 +21,16 @@ namespace CafeBarOrderingSystem
         private void addBtn_Click(object sender, EventArgs e)
         {
             string productName = productNameTb.Text;
+            string price = priceTb.Text;
+            if (price.Contains("."))
+                price = price.Replace('.', ',');
             if (string.IsNullOrWhiteSpace(productName))
             {
                 MessageBox.Show("Product name is required.");
                 return;
             }
 
-            if (!double.TryParse(priceTb.Text, out double productPrice))
+            if (!double.TryParse(price, out double productPrice))
             {
                 MessageBox.Show("Invalid price value.");
                 return;
