@@ -19,11 +19,14 @@ namespace CafeBarOrderingSystem
             InitializeComponent();
             lvProducts.View = View.Details;
             lvProducts.Columns.Add("Product: ");
+            lvProducts.Columns.Add("Type: ");
             lvProducts.Columns.Add("Price: ");
-            lvProducts.Columns[0].Width = 250;
-            lvProducts.Columns[1].Width = 250;
+            lvProducts.Columns[0].Width = 150;
+            lvProducts.Columns[1].Width = 150;
+            lvProducts.Columns[2].Width = 150;
             this.Width = 500;
             this.Height = 900;
+            this.AutoScroll = true;
             hasChanges = false;
         }
         public void DisplayOrders()
@@ -35,6 +38,7 @@ namespace CafeBarOrderingSystem
                 foreach (Product product in availableProducts)
                 {
                     ListViewItem item = new ListViewItem(product.name);
+                    item.SubItems.Add(product.type.ToString());
                     item.SubItems.Add(product.price.ToString());
                     lvProducts.Items.Add(item);
                 }

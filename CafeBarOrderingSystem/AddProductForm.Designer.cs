@@ -71,14 +71,14 @@ namespace CafeBarOrderingSystem
             this.priceTb.Location = new System.Drawing.Point(119, 140);
             this.priceTb.Name = "priceTb";
             this.priceTb.Size = new System.Drawing.Size(93, 22);
-            this.priceTb.TabIndex = 2;
+            this.priceTb.TabIndex = 3;
             // 
             // addBtn
             // 
             this.addBtn.Location = new System.Drawing.Point(41, 203);
             this.addBtn.Name = "addBtn";
             this.addBtn.Size = new System.Drawing.Size(94, 34);
-            this.addBtn.TabIndex = 3;
+            this.addBtn.TabIndex = 4;
             this.addBtn.Text = "Add";
             this.addBtn.UseVisualStyleBackColor = true;
             this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
@@ -88,7 +88,7 @@ namespace CafeBarOrderingSystem
             this.cancelBtn.Location = new System.Drawing.Point(221, 203);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(94, 34);
-            this.cancelBtn.TabIndex = 4;
+            this.cancelBtn.TabIndex = 5;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = true;
             this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
@@ -98,7 +98,7 @@ namespace CafeBarOrderingSystem
             this.tbType.Location = new System.Drawing.Point(119, 84);
             this.tbType.Name = "tbType";
             this.tbType.Size = new System.Drawing.Size(173, 22);
-            this.tbType.TabIndex = 6;
+            this.tbType.TabIndex = 2;
             // 
             // label3
             // 
