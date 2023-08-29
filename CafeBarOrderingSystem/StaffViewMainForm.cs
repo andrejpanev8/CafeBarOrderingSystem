@@ -39,23 +39,23 @@ namespace CafeBarOrderingSystem
             /*for (int i = 0; i < 5; i++)                     //Dummy Code
                 currentOrders.Add(new Order());             //Dummy Code*/
             List<ProductRow> testList = new List<ProductRow>();
-            testList.Add(new ProductRow(new Product("Jajce", 15), 87, "Ohne Zwiebeln"));
-            testList.Add(new ProductRow(new Product("Kappa", 13), 5, "Zhanzi"));
-            testList.Add(new ProductRow(new Product("Product1", 35.65), 42, "Description1"));
-            testList.Add(new ProductRow(new Product("Product2", 12.23), 18, "Description2"));
-            testList.Add(new ProductRow(new Product("Product3", 87.99), 7, "Description3"));
-            testList.Add(new ProductRow(new Product("Product4", 50.17), 91, "Description4"));
-            testList.Add(new ProductRow(new Product("Product5", 29.78), 64, "Description5"));
-            testList.Add(new ProductRow(new Product("Product6", 63.41), 23, "Description6"));
-            testList.Add(new ProductRow(new Product("Product7", 5.05), 77, "Description7"));
-            testList.Add(new ProductRow(new Product("Product8", 88.12), 39, "Description8"));
-            testList.Add(new ProductRow(new Product("Product9", 73.25), 52, "Description9"));
-            testList.Add(new ProductRow(new Product("Product10", 18.90), 11, "Description10"));
+            testList.Add(new ProductRow(new Product("Jajce", 15, "Alcohol"), 87, "Ohne Zwiebeln"));
+            testList.Add(new ProductRow(new Product("Kappa", 13, "Alcohol"), 5, "Zhanzi"));
+            testList.Add(new ProductRow(new Product("Product1", 35.65, "Alcohol"), 42, "Description1"));
+            testList.Add(new ProductRow(new Product("Product2", 12.23, "Alcohol"), 18, "Description2"));
+            testList.Add(new ProductRow(new Product("Product3", 87.99, "Alcohol"), 7, "Description3"));
+            testList.Add(new ProductRow(new Product("Product4", 50.17, "Alcohol"), 91, "Description4"));
+            testList.Add(new ProductRow(new Product("Product5", 29.78, "Alcohol"), 64, "Description5"));
+            testList.Add(new ProductRow(new Product("Product6", 63.41, "Alcohol"), 23, "Description6"));
+            testList.Add(new ProductRow(new Product("Product7", 5.05, "Alcohol"), 77, "Description7"));
+            testList.Add(new ProductRow(new Product("Product8", 88.12, "Alcohol"), 39, "Description8"));
+            testList.Add(new ProductRow(new Product("Product9", 73.25, "Alcohol"), 52, "Description9"));
+            testList.Add(new ProductRow(new Product("Product10", 18.90, "Alcohol"), 11, "Description10"));
             currentOrders.Add(new Order(testList));
             testList.Clear();
 
-            testList.Add(new ProductRow(new Product("Mandrahora", 6), 6, "Jako"));
-            testList.Add(new ProductRow(new Product("Longo", 10), 5, "Zhuriosm"));
+            testList.Add(new ProductRow(new Product("Mandrahora", 6, "Coffee"), 6, "Jako"));
+            testList.Add(new ProductRow(new Product("Longo", 10, "Coffee"), 5, "Zhuriosm"));
             currentOrders.Add(new Order(testList));
 
             //////////////////////////////Dummy Code End//////////////////

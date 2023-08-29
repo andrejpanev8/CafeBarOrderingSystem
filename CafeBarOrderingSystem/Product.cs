@@ -10,11 +10,12 @@ namespace CafeBarOrderingSystem
     {
         public string name { get; set; }
         public double price { get; set; }
-
-        public Product(string name, double price)
+        public string type { get; set; }
+        public Product(string name, double price, string type)
         {
             this.name = name;
             this.price = price;
+            this.type = type;
         }
 
         public override bool Equals(object obj)

@@ -21,12 +21,21 @@ namespace CafeBarOrderingSystem
         private void addBtn_Click(object sender, EventArgs e)
         {
             string productName = productNameTb.Text;
+            string productType = tbType.Text;
             string price = priceTb.Text;
+
             if (price.Contains("."))
                 price = price.Replace('.', ',');
+
             if (string.IsNullOrWhiteSpace(productName))
             {
                 MessageBox.Show("Product name is required.");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(productType))
+            {
+                MessageBox.Show("Product type is required.");
                 return;
             }
 
@@ -36,7 +45,7 @@ namespace CafeBarOrderingSystem
                 return;
             }
 
-            NewProduct = new Product(productName, productPrice);
+            NewProduct = new Product(productName, productPrice, productType);
             DialogResult = DialogResult.OK;
             Close();
         }

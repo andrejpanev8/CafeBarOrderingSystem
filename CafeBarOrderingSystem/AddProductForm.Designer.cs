@@ -35,13 +35,15 @@ namespace CafeBarOrderingSystem
             this.priceTb = new System.Windows.Forms.TextBox();
             this.addBtn = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
+            this.tbType = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(63, 65);
+            this.label1.Location = new System.Drawing.Point(41, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 20);
             this.label1.TabIndex = 0;
@@ -51,7 +53,7 @@ namespace CafeBarOrderingSystem
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(82, 140);
+            this.label2.Location = new System.Drawing.Point(60, 140);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 20);
             this.label2.TabIndex = 1;
@@ -59,14 +61,14 @@ namespace CafeBarOrderingSystem
             // 
             // productNameTb
             // 
-            this.productNameTb.Location = new System.Drawing.Point(142, 65);
+            this.productNameTb.Location = new System.Drawing.Point(119, 32);
             this.productNameTb.Name = "productNameTb";
             this.productNameTb.Size = new System.Drawing.Size(173, 22);
             this.productNameTb.TabIndex = 1;
             // 
             // priceTb
             // 
-            this.priceTb.Location = new System.Drawing.Point(142, 140);
+            this.priceTb.Location = new System.Drawing.Point(119, 140);
             this.priceTb.Name = "priceTb";
             this.priceTb.Size = new System.Drawing.Size(93, 22);
             this.priceTb.TabIndex = 2;
@@ -91,12 +93,31 @@ namespace CafeBarOrderingSystem
             this.cancelBtn.UseVisualStyleBackColor = true;
             this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
+            // tbType
+            // 
+            this.tbType.Location = new System.Drawing.Point(119, 84);
+            this.tbType.Name = "tbType";
+            this.tbType.Size = new System.Drawing.Size(173, 22);
+            this.tbType.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(63, 84);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(50, 20);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Type:";
+            // 
             // AddProductForm
             // 
             this.AcceptButton = this.addBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(393, 260);
+            this.Controls.Add(this.tbType);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.addBtn);
             this.Controls.Add(this.priceTb);
@@ -118,5 +139,7 @@ namespace CafeBarOrderingSystem
         private System.Windows.Forms.TextBox priceTb;
         private System.Windows.Forms.Button addBtn;
         private System.Windows.Forms.Button cancelBtn;
+        private System.Windows.Forms.TextBox tbType;
+        private System.Windows.Forms.Label label3;
     }
 }
