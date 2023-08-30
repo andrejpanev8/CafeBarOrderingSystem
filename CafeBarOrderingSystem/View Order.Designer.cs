@@ -49,7 +49,6 @@
             this.columnHeader2,
             this.columnHeader4,
             this.columnHeader5});
-            this.lvProductRows.Enabled = false;
             this.lvProductRows.HideSelection = false;
             this.lvProductRows.Location = new System.Drawing.Point(13, 13);
             this.lvProductRows.Name = "lvProductRows";
