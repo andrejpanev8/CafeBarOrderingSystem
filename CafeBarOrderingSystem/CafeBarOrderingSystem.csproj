@@ -100,6 +100,12 @@
     <Compile Include="StaffViewMainForm.Designer.cs">
       <DependentUpon>StaffViewMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Order.Designer.cs">
+      <DependentUpon>View Order.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddProductForm.resx">
       <DependentUpon>AddProductForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +138,9 @@
     </Compile>
     <EmbeddedResource Include="StaffViewMainForm.resx">
       <DependentUpon>StaffViewMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View Order.resx">
+      <DependentUpon>View Order.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

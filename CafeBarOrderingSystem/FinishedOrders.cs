@@ -46,5 +46,10 @@ namespace CafeBarOrderingSystem
                 e.Cancel = true;
             }
         }
+
+        private void FinishedOrders_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

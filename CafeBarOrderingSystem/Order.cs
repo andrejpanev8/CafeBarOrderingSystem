@@ -12,6 +12,7 @@ namespace CafeBarOrderingSystem
         public int TotalWaitTime { get; set; }
         public int FinishedWaitTime { get; set; }
         public double TotalPrice { get; set; }
+        public int TableNumber { get; set; }
 
         public System.Windows.Forms.ListView lvOrder { get; set; }
         public System.Windows.Forms.ListViewItem footer { get; set; }

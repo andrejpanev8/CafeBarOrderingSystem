@@ -12,8 +12,9 @@ namespace CafeBarOrderingSystem
 {
     public partial class ProductsView : Form
     {
-        public List<Product> availableProducts = new List<Product>();
+        public List<Product> availableProducts { get; set; } = new List<Product>();
         public bool hasChanges;
+        public static ProductsView Instance { get; set; }
         public ProductsView()
         {
             InitializeComponent();
@@ -28,6 +29,7 @@ namespace CafeBarOrderingSystem
             this.Height = 900;
             this.AutoScroll = true;
             hasChanges = false;
+            Instance = this;
         }
         public void DisplayOrders()
         {
@@ -44,6 +46,10 @@ namespace CafeBarOrderingSystem
                 }
             }
         }
+        public List<Product> getAvailableProducts()
+        {
+            return availableProducts;
+        }
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             base.OnFormClosing(e);
@@ -55,6 +61,11 @@ namespace CafeBarOrderingSystem
                 this.Hide();
                 e.Cancel = true;
             }
+        }
+
+        private void lvProducts_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

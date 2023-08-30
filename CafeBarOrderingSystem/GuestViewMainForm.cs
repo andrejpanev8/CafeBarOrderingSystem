@@ -97,5 +97,10 @@ namespace CafeBarOrderingSystem
         {
             ConfirmTable(13);
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

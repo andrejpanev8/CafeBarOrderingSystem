@@ -55,5 +55,10 @@ namespace CafeBarOrderingSystem
             DialogResult = DialogResult.Cancel;
             Close();
         }
+
+        private void AddProductForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
