@@ -66,7 +66,7 @@ namespace CafeBarOrderingSystem
                 {
                     propertiesOfOrder.Add(temp.ToString().Split('{','}')[1]);
                 }
-                double price=(double)int.Parse(propertiesOfOrder[2]);
+                double price = Double.Parse(propertiesOfOrder[2]);
                 Product product = new Product(propertiesOfOrder[0], price , propertiesOfOrder[1]);
                 ProductRow productRow = new ProductRow(product, (int)nupQuantity.Value, tbDescription.Text);
                 ProductsForOrder.Add(productRow);

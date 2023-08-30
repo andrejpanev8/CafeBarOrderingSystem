@@ -17,3 +17,21 @@ C:\Users\Bace\Source\Repos\CafeBarOrderingSystem_FINAL\CafeBarOrderingSystem\obj
 C:\Users\Bace\Source\Repos\CafeBarOrderingSystem_FINAL\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.exe
 C:\Users\Bace\Source\Repos\CafeBarOrderingSystem_FINAL\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.pdb
 C:\Users\Bace\Source\Repos\CafeBarOrderingSystem_FINAL\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.View_Order.resources
+C:\Users\HP\Desktop\FINKI\II - Semestar 4\VizuelnoProgramiranje\CafeBarOrderingSystem\CafeBarOrderingSystem\bin\Debug\CafeBarOrderingSystem.exe.config
+C:\Users\HP\Desktop\FINKI\II - Semestar 4\VizuelnoProgramiranje\CafeBarOrderingSystem\CafeBarOrderingSystem\bin\Debug\CafeBarOrderingSystem.exe
+C:\Users\HP\Desktop\FINKI\II - Semestar 4\VizuelnoProgramiranje\CafeBarOrderingSystem\CafeBarOrderingSystem\bin\Debug\CafeBarOrderingSystem.pdb
+C:\Users\HP\Desktop\FINKI\II - Semestar 4\VizuelnoProgramiranje\CafeBarOrderingSystem\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\FINKI\II - Semestar 4\VizuelnoProgramiranje\CafeBarOrderingSystem\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.AddProductForm.resources
+C:\Users\HP\Desktop\FINKI\II - Semestar 4\VizuelnoProgramiranje\CafeBarOrderingSystem\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.EarningsForm.resources
+C:\Users\HP\Desktop\FINKI\II - Semestar 4\VizuelnoProgramiranje\CafeBarOrderingSystem\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.FinishedOrders.resources
+C:\Users\HP\Desktop\FINKI\II - Semestar 4\VizuelnoProgramiranje\CafeBarOrderingSystem\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.GuestViewMainForm.resources
+C:\Users\HP\Desktop\FINKI\II - Semestar 4\VizuelnoProgramiranje\CafeBarOrderingSystem\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.MainForm.resources
+C:\Users\HP\Desktop\FINKI\II - Semestar 4\VizuelnoProgramiranje\CafeBarOrderingSystem\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.Make_order.resources
+C:\Users\HP\Desktop\FINKI\II - Semestar 4\VizuelnoProgramiranje\CafeBarOrderingSystem\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.ProductsView.resources
+C:\Users\HP\Desktop\FINKI\II - Semestar 4\VizuelnoProgramiranje\CafeBarOrderingSystem\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.Properties.Resources.resources
+C:\Users\HP\Desktop\FINKI\II - Semestar 4\VizuelnoProgramiranje\CafeBarOrderingSystem\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.StaffViewMainForm.resources
+C:\Users\HP\Desktop\FINKI\II - Semestar 4\VizuelnoProgramiranje\CafeBarOrderingSystem\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.View_Order.resources
+C:\Users\HP\Desktop\FINKI\II - Semestar 4\VizuelnoProgramiranje\CafeBarOrderingSystem\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.csproj.GenerateResource.cache
+C:\Users\HP\Desktop\FINKI\II - Semestar 4\VizuelnoProgramiranje\CafeBarOrderingSystem\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\FINKI\II - Semestar 4\VizuelnoProgramiranje\CafeBarOrderingSystem\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.exe
+C:\Users\HP\Desktop\FINKI\II - Semestar 4\VizuelnoProgramiranje\CafeBarOrderingSystem\CafeBarOrderingSystem\obj\Debug\CafeBarOrderingSystem.pdb

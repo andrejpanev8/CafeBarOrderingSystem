@@ -252,5 +252,17 @@ namespace CafeBarOrderingSystem
             earnings.Show();
             earnings.CreateChart(FinishedOrders.finishedOrders);
         }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+
+            // Check if the reason for closing is the user clicking the close button (X)
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                // Hide the form instead of disposing it
+                this.Hide();
+                e.Cancel = true;
+            }
+        }
     }
 }
