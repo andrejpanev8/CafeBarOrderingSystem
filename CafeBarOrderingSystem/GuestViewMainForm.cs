@@ -12,12 +12,14 @@ namespace CafeBarOrderingSystem
 {
     public partial class GuestViewMainForm : Form
     {
+        public static GuestViewMainForm GuestViewInstance { get; set; } 
         public GuestViewMainForm()
         {
             InitializeComponent();
             WindowState = FormWindowState.Maximized;
             MaximizeBox = false;
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            GuestViewInstance = this;   
         }
 
         private void GuestViewMainForm_Load(object sender, EventArgs e)

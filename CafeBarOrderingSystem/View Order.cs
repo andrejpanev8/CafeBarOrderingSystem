@@ -30,17 +30,22 @@ namespace CafeBarOrderingSystem
         {
             lvProductRows.Items.Clear();
             double sumOfPrice = 0;
-            foreach (ProductRow row in Rows)
+            if (Rows.Count > 0)
             {
-                ListViewItem item = new ListViewItem(row.product.name);
-                item.SubItems.Add(row.product.type);
-                item.SubItems.Add(row.product.price.ToString());
-                item.SubItems.Add(row.quantity.ToString());
-                lvProductRows.Items.Add(item);
-                sumOfPrice += row.product.price * row.quantity;
+
+
+                foreach (ProductRow row in Rows)
+                {
+                    ListViewItem item = new ListViewItem(row.product.name);
+                    item.SubItems.Add(row.product.type);
+                    item.SubItems.Add(row.product.price.ToString());
+                    item.SubItems.Add(row.quantity.ToString());
+                    lvProductRows.Items.Add(item);
+                    sumOfPrice += row.product.price * row.quantity;
+                }
+                tbFullPrice.Text = sumOfPrice.ToString();
+                tbSpeacialRequest.Text = Rows[Rows.Count - 1].description.ToString();
             }
-            tbFullPrice.Text = sumOfPrice.ToString();
-            tbSpeacialRequest.Text = Rows[Rows.Count - 1].description.ToString();
         }
 
         private void btnCancelOrder_Click(object sender, EventArgs e)
@@ -58,6 +63,7 @@ namespace CafeBarOrderingSystem
                 
                 Make_order.Instance_MakeOrder.ProductsForOrder.RemoveAll(x => x.product.name == lvProductRows.SelectedItems[0].Text);
                 lvProductRows.SelectedItems[0].Remove();
+                InitiallizeMenu();
             }
         }
 
@@ -65,6 +71,9 @@ namespace CafeBarOrderingSystem
         {
             Order newOrder = new Order(Rows, tableNumber);
             StaffViewMainForm.InstanceStaffView.currentOrders.Add(newOrder);
+            Make_order.Instance_MakeOrder.Close();
+            GuestViewMainForm.GuestViewInstance.Close();
+            this.Close();
         }
     }
 }

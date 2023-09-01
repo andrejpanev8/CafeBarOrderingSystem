@@ -68,7 +68,7 @@ namespace CafeBarOrderingSystem
 
         private void btnAddToOrder_Click(object sender, EventArgs e)
         {
-            if (nupQuantity.Enabled == true)
+            if (lvMenuProducts.SelectedItems.Count != 0)
             {
 
                 

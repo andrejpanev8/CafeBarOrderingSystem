@@ -120,9 +120,9 @@
             // 
             // tbFullPrice
             // 
-            this.tbFullPrice.Enabled = false;
             this.tbFullPrice.Location = new System.Drawing.Point(572, 215);
             this.tbFullPrice.Name = "tbFullPrice";
+            this.tbFullPrice.ReadOnly = true;
             this.tbFullPrice.Size = new System.Drawing.Size(174, 20);
             this.tbFullPrice.TabIndex = 5;
             // 
@@ -138,10 +138,10 @@
             // 
             // tbSpeacialRequest
             // 
-            this.tbSpeacialRequest.Enabled = false;
             this.tbSpeacialRequest.Location = new System.Drawing.Point(573, 42);
             this.tbSpeacialRequest.Multiline = true;
             this.tbSpeacialRequest.Name = "tbSpeacialRequest";
+            this.tbSpeacialRequest.ReadOnly = true;
             this.tbSpeacialRequest.Size = new System.Drawing.Size(173, 128);
             this.tbSpeacialRequest.TabIndex = 7;
             // 
