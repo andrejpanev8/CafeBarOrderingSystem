@@ -16,8 +16,9 @@ namespace CafeBarOrderingSystem
 
         public System.Windows.Forms.ListView lvOrder { get; set; }
         public System.Windows.Forms.ListViewItem footer { get; set; }
-        public Order(List<ProductRow> productRow)  //< - Must receive a list od product rows
+        public Order(List<ProductRow> productRow, int tableNumber)  //< - Must receive a list od product rows
         {
+            TableNumber = tableNumber;
             foreach (ProductRow row in productRow)
                 this.productRow.Add(row);
 
@@ -27,7 +28,7 @@ namespace CafeBarOrderingSystem
             }   //Setting total price to be paid on the order
 
 
-            footer = new System.Windows.Forms.ListViewItem($"Pending: {TotalWaitTime} sec");
+            footer = new System.Windows.Forms.ListViewItem($"Table number{TableNumber} Pending: {TotalWaitTime} sec");
             footer.SubItems.Add("");
             footer.SubItems.Add("");
             footer.SubItems.Add($"Total: {TotalPrice} $");

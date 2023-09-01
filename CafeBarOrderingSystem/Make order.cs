@@ -15,11 +15,15 @@ namespace CafeBarOrderingSystem
     {
         public List<ProductRow> ProductsForOrder { get; set; } = new List<ProductRow>();
         int tableNumber;
+        List<string> typeOfProducts = new List<string>();
+        public static Make_order Instance_MakeOrder { get; set; }
         public Make_order(int tableNumber)
         {
             InitializeComponent();
             InitiallizeMenu();
             this.tableNumber = tableNumber;
+            Instance_MakeOrder = this;
+
         }
 
         private void Make_order_Load(object sender, EventArgs e)
@@ -31,15 +35,22 @@ namespace CafeBarOrderingSystem
             this.AutoScroll = true;
             List<Product> availableProducts = ProductsView.Instance.getAvailableProducts();
             lvMenuProducts.Items.Clear();
-
+      
+            lvType.Items.Clear();
+            lvType.Items.Add(new ListViewItem("View all"));
             foreach (Product product in availableProducts)
             {
                 ListViewItem item = new ListViewItem(product.name);
-                item.SubItems.Add(product.type.ToString());
                 item.SubItems.Add(product.price.ToString());
                 lvMenuProducts.Items.Add(item);
                 
+                if (typeOfProducts.Contains(product.type) == false)
+                {
+                    typeOfProducts.Add(product.type);
+                    lvType.Items.Add(new ListViewItem(product.type));
+                }
             }
+
         }
 
         private void lvMenuProducts_SelectedIndexChanged(object sender, EventArgs e)
@@ -62,12 +73,13 @@ namespace CafeBarOrderingSystem
 
                 
                 List<string> propertiesOfOrder = new List<string>();
-                foreach(var temp in lvMenuProducts.SelectedItems[0].SubItems)
+                foreach (var temp in lvMenuProducts.SelectedItems[0].SubItems)
                 {
-                    propertiesOfOrder.Add(temp.ToString().Split('{','}')[1]);
+                    propertiesOfOrder.Add(temp.ToString().Split('{', '}')[1]);
                 }
-                double price = Double.Parse(propertiesOfOrder[2]);
-                Product product = new Product(propertiesOfOrder[0], price , propertiesOfOrder[1]);
+                List<Product> AvailableProducts = ProductsView.Instance.getAvailableProducts();
+                
+                Product product = AvailableProducts.Find(x => x.name == propertiesOfOrder[0]);
                 ProductRow productRow = new ProductRow(product, (int)nupQuantity.Value, tbDescription.Text);
                 bool flag = false;
                 foreach (ProductRow row in ProductsForOrder)
@@ -91,6 +103,39 @@ namespace CafeBarOrderingSystem
         {
             View_Order viewForm = new View_Order(ProductsForOrder , tableNumber);
             viewForm.ShowDialog();
+        }
+
+        private void lvType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lvType.SelectedItems.Count > 0) {
+                List<Product> availableProducts = ProductsView.Instance.getAvailableProducts();
+                lvMenuProducts.Items.Clear();
+                ListViewItem selectedType= lvType.SelectedItems[0];
+                if (selectedType.Text != "View all")
+                {
+                    
+                    
+                    foreach (Product product in availableProducts)
+                    {
+                        if (product.type == selectedType.Text)
+                        {
+                            ListViewItem item = new ListViewItem(product.name);
+                            item.SubItems.Add(product.price.ToString());
+                            lvMenuProducts.Items.Add(item);
+                        }
+                    }
+                }
+                else
+                {
+                    
+                    foreach(Product product in availableProducts)
+                    {
+                        ListViewItem item = new ListViewItem(product.name);
+                        item.SubItems.Add(product.price.ToString());
+                        lvMenuProducts.Items.Add(item);
+                    }
+                }
+            }
         }
     }
 }

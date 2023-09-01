@@ -48,60 +48,61 @@ namespace CafeBarOrderingSystem
             this.productsMenuBtn});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(600, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // addProductsMenuBtn
             // 
             this.addProductsMenuBtn.Name = "addProductsMenuBtn";
-            this.addProductsMenuBtn.Size = new System.Drawing.Size(107, 24);
+            this.addProductsMenuBtn.Size = new System.Drawing.Size(86, 20);
             this.addProductsMenuBtn.Text = "Add product";
             this.addProductsMenuBtn.Click += new System.EventHandler(this.addProductsMenuBtn_Click);
             // 
             // finishedOrdersMenuBtn
             // 
             this.finishedOrdersMenuBtn.Name = "finishedOrdersMenuBtn";
-            this.finishedOrdersMenuBtn.Size = new System.Drawing.Size(125, 24);
+            this.finishedOrdersMenuBtn.Size = new System.Drawing.Size(101, 20);
             this.finishedOrdersMenuBtn.Text = "Finished Orders";
             this.finishedOrdersMenuBtn.Click += new System.EventHandler(this.finishedOrdersMenuBtn_Click);
             // 
             // earningsMenuBtn
             // 
             this.earningsMenuBtn.Name = "earningsMenuBtn";
-            this.earningsMenuBtn.Size = new System.Drawing.Size(142, 24);
+            this.earningsMenuBtn.Size = new System.Drawing.Size(114, 20);
             this.earningsMenuBtn.Text = "Earnings overview";
             this.earningsMenuBtn.Click += new System.EventHandler(this.earningsMenuBtn_Click);
             // 
             // productsMenuBtn
             // 
             this.productsMenuBtn.Name = "productsMenuBtn";
-            this.productsMenuBtn.Size = new System.Drawing.Size(116, 24);
+            this.productsMenuBtn.Size = new System.Drawing.Size(94, 20);
             this.productsMenuBtn.Text = "View Products";
             this.productsMenuBtn.Click += new System.EventHandler(this.productsMenuBtn_Click);
             // 
             // layoutPanel
             // 
             this.layoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutPanel.Location = new System.Drawing.Point(0, 28);
-            this.layoutPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.layoutPanel.Location = new System.Drawing.Point(0, 24);
+            this.layoutPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.layoutPanel.Name = "layoutPanel";
-            this.layoutPanel.Size = new System.Drawing.Size(800, 422);
+            this.layoutPanel.Size = new System.Drawing.Size(600, 342);
             this.layoutPanel.TabIndex = 1;
             this.layoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.layoutPanel_Paint);
             // 
             // StaffViewMainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.layoutPanel);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "StaffViewMainForm";
             this.Text = "StaffViewMainForm";
+            this.Load += new System.EventHandler(this.StaffViewMainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

@@ -49,6 +49,7 @@
             this.columnHeader2,
             this.columnHeader4,
             this.columnHeader5});
+            this.lvProductRows.FullRowSelect = true;
             this.lvProductRows.HideSelection = false;
             this.lvProductRows.Location = new System.Drawing.Point(13, 13);
             this.lvProductRows.Name = "lvProductRows";
@@ -85,6 +86,7 @@
             this.btnDeleteProduct.TabIndex = 1;
             this.btnDeleteProduct.Text = "Delete from order";
             this.btnDeleteProduct.UseVisualStyleBackColor = true;
+            this.btnDeleteProduct.Click += new System.EventHandler(this.btnDeleteProduct_Click);
             // 
             // btnMakeOrder
             // 
@@ -94,6 +96,7 @@
             this.btnMakeOrder.TabIndex = 2;
             this.btnMakeOrder.Text = "Make order";
             this.btnMakeOrder.UseVisualStyleBackColor = true;
+            this.btnMakeOrder.Click += new System.EventHandler(this.btnMakeOrder_Click);
             // 
             // btnCancelOrder
             // 
@@ -103,6 +106,7 @@
             this.btnCancelOrder.TabIndex = 3;
             this.btnCancelOrder.Text = "Cancel order";
             this.btnCancelOrder.UseVisualStyleBackColor = true;
+            this.btnCancelOrder.Click += new System.EventHandler(this.btnCancelOrder_Click);
             // 
             // lblFullPrice
             // 

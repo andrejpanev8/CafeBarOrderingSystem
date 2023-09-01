@@ -20,6 +20,7 @@ namespace CafeBarOrderingSystem
         public ProductsView AvailableProducts = new ProductsView();
         public FinishedOrders FinishedOrders = new FinishedOrders();
         public Timer timer;
+        public static StaffViewMainForm InstanceStaffView { get; set; }
         public StaffViewMainForm()
         {
             InitializeComponent();
@@ -27,6 +28,7 @@ namespace CafeBarOrderingSystem
             MaximizeBox = false;
             FormBorderStyle = FormBorderStyle.FixedDialog;
             this.DoubleBuffered = true;
+            InstanceStaffView = this;
 
             //Creating a timer to count time for all orders
             timer = new System.Windows.Forms.Timer();
@@ -51,12 +53,12 @@ namespace CafeBarOrderingSystem
             testList.Add(new ProductRow(new Product("Product8", 88.12, "Alcohol"), 39, "Description8"));
             testList.Add(new ProductRow(new Product("Product9", 73.25, "Alcohol"), 52, "Description9"));
             testList.Add(new ProductRow(new Product("Product10", 18.90, "Alcohol"), 11, "Description10"));
-            currentOrders.Add(new Order(testList));
+            currentOrders.Add(new Order(testList, 2));
             testList.Clear();
 
             testList.Add(new ProductRow(new Product("Mandrahora", 6, "Coffee"), 6, "Jako"));
             testList.Add(new ProductRow(new Product("Longo", 10, "Coffee"), 5, "Zhuriosm"));
-            currentOrders.Add(new Order(testList));
+            currentOrders.Add(new Order(testList, 3));
 
             //////////////////////////////Dummy Code End//////////////////
             foreach (Order cc in currentOrders)
@@ -263,6 +265,11 @@ namespace CafeBarOrderingSystem
                 this.Hide();
                 e.Cancel = true;
             }
+        }
+
+        private void StaffViewMainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

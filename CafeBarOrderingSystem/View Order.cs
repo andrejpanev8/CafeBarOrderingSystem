@@ -42,5 +42,29 @@ namespace CafeBarOrderingSystem
             tbFullPrice.Text = sumOfPrice.ToString();
             tbSpeacialRequest.Text = Rows[Rows.Count - 1].description.ToString();
         }
+
+        private void btnCancelOrder_Click(object sender, EventArgs e)
+        {
+            Make_order.Instance_MakeOrder.Close();
+            this.Close();
+        }
+
+        private void btnDeleteProduct_Click(object sender, EventArgs e)
+        {
+            if (lvProductRows.SelectedItems.Count > 0)
+            {
+                
+                Rows.RemoveAll(row => row.product.name == lvProductRows.SelectedItems[0].Text);
+                
+                Make_order.Instance_MakeOrder.ProductsForOrder.RemoveAll(x => x.product.name == lvProductRows.SelectedItems[0].Text);
+                lvProductRows.SelectedItems[0].Remove();
+            }
+        }
+
+        private void btnMakeOrder_Click(object sender, EventArgs e)
+        {
+            Order newOrder = new Order(Rows, tableNumber);
+            StaffViewMainForm.InstanceStaffView.currentOrders.Add(newOrder);
+        }
     }
 }
