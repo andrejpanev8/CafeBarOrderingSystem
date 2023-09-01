@@ -12,23 +12,25 @@ namespace CafeBarOrderingSystem
 {
     public partial class MainForm : Form
     {
+        StaffViewMainForm staffView;
+        GuestViewMainForm guestView;
         public MainForm()
         {
             InitializeComponent();
             WindowState = FormWindowState.Maximized;
             MaximizeBox = false;
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            staffView = new StaffViewMainForm();
+            guestView = new GuestViewMainForm();
         }
 
         private void btnStaffView_Click(object sender, EventArgs e)
         {
-            StaffViewMainForm staffView = new StaffViewMainForm();
             staffView.ShowDialog();
         }
 
         private void btnGuestView_Click(object sender, EventArgs e)
         {
-            GuestViewMainForm guestView = new GuestViewMainForm();
             guestView.ShowDialog();
         }
     }
