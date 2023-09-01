@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,7 +13,7 @@ namespace CafeBarOrderingSystem
 {
     public partial class Make_order : Form
     {
-        public List<ProductRow> ProductsForOrder { get; set; }
+        public List<ProductRow> ProductsForOrder { get; set; } = new List<ProductRow>();
         int tableNumber;
         public Make_order(int tableNumber)
         {
@@ -56,7 +57,6 @@ namespace CafeBarOrderingSystem
 
         private void btnAddToOrder_Click(object sender, EventArgs e)
         {
-            ProductsForOrder = new List<ProductRow>();
             if (nupQuantity.Enabled == true)
             {
 
@@ -69,7 +69,20 @@ namespace CafeBarOrderingSystem
                 double price = Double.Parse(propertiesOfOrder[2]);
                 Product product = new Product(propertiesOfOrder[0], price , propertiesOfOrder[1]);
                 ProductRow productRow = new ProductRow(product, (int)nupQuantity.Value, tbDescription.Text);
-                ProductsForOrder.Add(productRow);
+                bool flag = false;
+                foreach (ProductRow row in ProductsForOrder)
+                {
+                    if (productRow.product.name == row.product.name)
+                    {
+                        row.quantity += productRow.quantity;
+                        row.description = productRow.description;
+                        flag = true; break;
+                    }
+                }
+                if (flag == false)
+                {
+                    ProductsForOrder.Add(productRow);
+                }
             }
 
         }
