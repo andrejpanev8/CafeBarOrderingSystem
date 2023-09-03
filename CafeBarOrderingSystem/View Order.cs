@@ -69,7 +69,7 @@ namespace CafeBarOrderingSystem
 
         private void btnMakeOrder_Click(object sender, EventArgs e)
         {
-            if(Rows.Count > 0)
+            if (Rows.Count > 0)
             {
                 Order newOrder = new Order(Rows, tableNumber);
                 StaffViewMainForm.InstanceStaffView.currentOrders.Add(newOrder);
@@ -78,7 +78,10 @@ namespace CafeBarOrderingSystem
                 GuestViewMainForm.GuestViewInstance.Close();
                 this.Close();
             }
-            MessageBox.Show("No products selected.","Please select a product first!", MessageBoxButtons.OK);
+            else
+            {
+                MessageBox.Show("No products selected.", "Please select a product first!", MessageBoxButtons.OK);
+            }
         }
     }
 }

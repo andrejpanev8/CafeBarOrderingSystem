@@ -159,7 +159,7 @@
             this.Controls.Add(this.btnDeleteProduct);
             this.Controls.Add(this.lvProductRows);
             this.Name = "View_Order";
-            this.Text = "View_Order";
+            this.Text = "View Order";
             this.Load += new System.EventHandler(this.View_Order_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -191,7 +191,7 @@
             this.Controls.Add(this.btnAddToOrder);
             this.Controls.Add(this.lvMenuProducts);
             this.Name = "Make_order";
-            this.Text = "Make_order";
+            this.Text = "Make order";
             this.Load += new System.EventHandler(this.Make_order_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nupQuantity)).EndInit();
             this.ResumeLayout(false);

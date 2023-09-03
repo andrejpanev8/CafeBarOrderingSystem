@@ -51,9 +51,9 @@ namespace CafeBarOrderingSystem
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(73, 50);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 50);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(611, 364);
+            this.pictureBox1.Size = new System.Drawing.Size(728, 364);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -62,15 +62,16 @@ namespace CafeBarOrderingSystem
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(312, 21);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label1.Location = new System.Drawing.Point(292, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 13);
+            this.label1.Size = new System.Drawing.Size(174, 26);
             this.label1.TabIndex = 1;
             this.label1.Text = "Select your table";
             // 
             // table1
             // 
-            this.table1.Location = new System.Drawing.Point(134, 93);
+            this.table1.Location = new System.Drawing.Point(88, 93);
             this.table1.Name = "table1";
             this.table1.Size = new System.Drawing.Size(26, 23);
             this.table1.TabIndex = 2;
@@ -79,7 +80,7 @@ namespace CafeBarOrderingSystem
             // 
             // tb2
             // 
-            this.tb2.Location = new System.Drawing.Point(134, 222);
+            this.tb2.Location = new System.Drawing.Point(88, 222);
             this.tb2.Name = "tb2";
             this.tb2.Size = new System.Drawing.Size(26, 23);
             this.tb2.TabIndex = 3;
@@ -88,7 +89,7 @@ namespace CafeBarOrderingSystem
             // 
             // tb3
             // 
-            this.tb3.Location = new System.Drawing.Point(134, 314);
+            this.tb3.Location = new System.Drawing.Point(88, 311);
             this.tb3.Name = "tb3";
             this.tb3.Size = new System.Drawing.Size(26, 23);
             this.tb3.TabIndex = 4;
@@ -97,7 +98,7 @@ namespace CafeBarOrderingSystem
             // 
             // table4
             // 
-            this.table4.Location = new System.Drawing.Point(264, 93);
+            this.table4.Location = new System.Drawing.Point(241, 93);
             this.table4.Name = "table4";
             this.table4.Size = new System.Drawing.Size(26, 23);
             this.table4.TabIndex = 5;
@@ -106,7 +107,7 @@ namespace CafeBarOrderingSystem
             // 
             // table5
             // 
-            this.table5.Location = new System.Drawing.Point(330, 93);
+            this.table5.Location = new System.Drawing.Point(315, 93);
             this.table5.Name = "table5";
             this.table5.Size = new System.Drawing.Size(26, 23);
             this.table5.TabIndex = 6;
@@ -124,7 +125,7 @@ namespace CafeBarOrderingSystem
             // 
             // table7
             // 
-            this.table7.Location = new System.Drawing.Point(464, 93);
+            this.table7.Location = new System.Drawing.Point(480, 93);
             this.table7.Name = "table7";
             this.table7.Size = new System.Drawing.Size(26, 23);
             this.table7.TabIndex = 8;
@@ -133,7 +134,7 @@ namespace CafeBarOrderingSystem
             // 
             // table8
             // 
-            this.table8.Location = new System.Drawing.Point(264, 169);
+            this.table8.Location = new System.Drawing.Point(241, 169);
             this.table8.Name = "table8";
             this.table8.Size = new System.Drawing.Size(26, 23);
             this.table8.TabIndex = 9;
@@ -142,7 +143,7 @@ namespace CafeBarOrderingSystem
             // 
             // table9
             // 
-            this.table9.Location = new System.Drawing.Point(330, 169);
+            this.table9.Location = new System.Drawing.Point(315, 169);
             this.table9.Name = "table9";
             this.table9.Size = new System.Drawing.Size(26, 23);
             this.table9.TabIndex = 10;
@@ -160,7 +161,7 @@ namespace CafeBarOrderingSystem
             // 
             // table11
             // 
-            this.table11.Location = new System.Drawing.Point(464, 169);
+            this.table11.Location = new System.Drawing.Point(480, 169);
             this.table11.Name = "table11";
             this.table11.Size = new System.Drawing.Size(26, 23);
             this.table11.TabIndex = 12;
@@ -169,7 +170,7 @@ namespace CafeBarOrderingSystem
             // 
             // table13
             // 
-            this.table13.Location = new System.Drawing.Point(550, 363);
+            this.table13.Location = new System.Drawing.Point(583, 363);
             this.table13.Name = "table13";
             this.table13.Size = new System.Drawing.Size(26, 23);
             this.table13.TabIndex = 13;
@@ -206,7 +207,7 @@ namespace CafeBarOrderingSystem
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "GuestViewMainForm";
-            this.Text = "`";
+            this.Text = "Table selection";
             this.Load += new System.EventHandler(this.GuestViewMainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
