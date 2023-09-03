@@ -20,6 +20,8 @@ namespace CafeBarOrderingSystem
             WindowState = FormWindowState.Maximized;
             MaximizeBox = false;
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            btnStaffView.BackColor = Color.BurlyWood;
+            btnGuestView.BackColor = Color.BurlyWood;
             staffView = new StaffViewMainForm();
             guestView = new GuestViewMainForm();
         }
