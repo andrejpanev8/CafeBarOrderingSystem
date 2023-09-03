@@ -28,7 +28,7 @@ namespace CafeBarOrderingSystem
             }   //Setting total price to be paid on the order
 
 
-            footer = new System.Windows.Forms.ListViewItem($"Table number{TableNumber} Pending: {TotalWaitTime} sec");
+            footer = new System.Windows.Forms.ListViewItem($"Table number {TableNumber} Pending: {TotalWaitTime} sec");
             footer.SubItems.Add("");
             footer.SubItems.Add("");
             footer.SubItems.Add($"Total: {TotalPrice} $");

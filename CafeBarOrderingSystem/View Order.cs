@@ -69,11 +69,16 @@ namespace CafeBarOrderingSystem
 
         private void btnMakeOrder_Click(object sender, EventArgs e)
         {
-            Order newOrder = new Order(Rows, tableNumber);
-            StaffViewMainForm.InstanceStaffView.currentOrders.Add(newOrder);
-            Make_order.Instance_MakeOrder.Close();
-            GuestViewMainForm.GuestViewInstance.Close();
-            this.Close();
+            if(Rows.Count > 0)
+            {
+                Order newOrder = new Order(Rows, tableNumber);
+                StaffViewMainForm.InstanceStaffView.currentOrders.Add(newOrder);
+                StaffViewMainForm.InstanceStaffView.UpdateOrders(newOrder, true);
+                Make_order.Instance_MakeOrder.Close();
+                GuestViewMainForm.GuestViewInstance.Close();
+                this.Close();
+            }
+            MessageBox.Show("No products selected.","Please select a product first!", MessageBoxButtons.OK);
         }
     }
 }

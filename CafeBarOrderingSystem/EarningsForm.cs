@@ -67,7 +67,7 @@ namespace CafeBarOrderingSystem
             salesChart.Series["Product Sales"].IsValueShownAsLabel = true;
             salesChart.Series["Total Earnings"].IsValueShownAsLabel = true;
 
-            chartPanel.Width = productSales.Count() * 100;
+            chartPanel.Width = productSales.Count() * 100 + 300;
 
             Label totalEarningsLabel = new Label();
             Label mostSoldProductLabel = new Label();
@@ -91,10 +91,13 @@ namespace CafeBarOrderingSystem
             //Styling the labels
             totalEarningsLabel.Font = new Font(totalEarningsLabel.Font.FontFamily, 13);
             totalEarningsLabel.Height = 25;
+            totalEarningsLabel.Width = 300;
             mostSoldProductLabel.Font = new Font(mostSoldProductLabel.Font.FontFamily, 13);
             mostSoldProductLabel.Height = 25;
+            mostSoldProductLabel.Width = 300;
             leastSoldProductLabel.Font = new Font(leastSoldProductLabel.Font.FontFamily, 13);
             leastSoldProductLabel.Height = 25;
+            leastSoldProductLabel.Width = 300;
 
 
             // Add labels to the chartPanel
@@ -104,7 +107,7 @@ namespace CafeBarOrderingSystem
             chartPanel.Controls.Add(leastSoldProductLabel);
 
             this.Height = chartPanel.Height + totalEarningsLabel.Height * 3 + 15;
-            this.Width = Math.Min(Screen.PrimaryScreen.Bounds.Width, chartPanel.Width);
+            this.Width = Math.Min(Screen.PrimaryScreen.Bounds.Width, chartPanel.Width) + 50;
 
             chartPanel.AutoScroll = true;
             salesChart.Dock = DockStyle.Fill;

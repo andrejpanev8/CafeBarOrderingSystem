@@ -10,10 +10,6 @@ using System.Windows.Forms;
 
 namespace CafeBarOrderingSystem
 {
-    /// <summary>
-    /// Fix up transfer from current orders to finished orders price increases in footer, time/paid changed
-    /// in StaffViewMain instead of finished orders form
-    /// </summary>
     public partial class StaffViewMainForm : Form
     {
         public List<Order> currentOrders = new List<Order>(); //Current pending orders | order format
@@ -33,36 +29,6 @@ namespace CafeBarOrderingSystem
             //Creating a timer to count time for all orders
             timer = new System.Windows.Forms.Timer();
             timer.Tick += Timer_Tick;
-
-
-            ////////////////////Dummy code start/////////////////////////
-
-
-            /*for (int i = 0; i < 5; i++)                     //Dummy Code
-                currentOrders.Add(new Order());             //Dummy Code*/
-            List<ProductRow> testList = new List<ProductRow>();
-            testList.Add(new ProductRow(new Product("Jajce", 15, "Alcohol"), 87, "Ohne Zwiebeln"));
-            testList.Add(new ProductRow(new Product("Kappa", 13, "Alcohol"), 5, "Zhanzi"));
-            testList.Add(new ProductRow(new Product("Product1", 35.65, "Alcohol"), 42, "Description1"));
-            testList.Add(new ProductRow(new Product("Product2", 12.23, "Alcohol"), 18, "Description2"));
-            testList.Add(new ProductRow(new Product("Product3", 87.99, "Alcohol"), 7, "Description3"));
-            testList.Add(new ProductRow(new Product("Product4", 50.17, "Alcohol"), 91, "Description4"));
-            testList.Add(new ProductRow(new Product("Product5", 29.78, "Alcohol"), 64, "Description5"));
-            testList.Add(new ProductRow(new Product("Product6", 63.41, "Alcohol"), 23, "Description6"));
-            testList.Add(new ProductRow(new Product("Product7", 5.05, "Alcohol"), 77, "Description7"));
-            testList.Add(new ProductRow(new Product("Product8", 88.12, "Alcohol"), 39, "Description8"));
-            testList.Add(new ProductRow(new Product("Product9", 73.25, "Alcohol"), 52, "Description9"));
-            testList.Add(new ProductRow(new Product("Product10", 18.90, "Alcohol"), 11, "Description10"));
-            currentOrders.Add(new Order(testList, 2));
-            testList.Clear();
-
-            testList.Add(new ProductRow(new Product("Mandrahora", 6, "Coffee"), 6, "Jako"));
-            testList.Add(new ProductRow(new Product("Longo", 10, "Coffee"), 5, "Zhuriosm"));
-            currentOrders.Add(new Order(testList, 3));
-
-            //////////////////////////////Dummy Code End//////////////////
-            foreach (Order cc in currentOrders)
-                UpdateOrders(cc, true);
             timer.Interval = 1000;
             timer.Start();
 
@@ -95,14 +61,6 @@ namespace CafeBarOrderingSystem
 
         public void CreateOrderListView(Order order, ListView newOrderListView)
         {
-            //################Dummy Code############
-            order.TotalPrice = 0;    //<- Doesn't work
-            foreach (ProductRow row in order.productRow)
-            {
-                order.TotalPrice += row.quantity * row.product.price;
-            }   //Setting total price to be paid on the order
-            //##########################################
-
             // Add columns to the ListView
             newOrderListView.Columns.Add("Product");
             newOrderListView.Columns.Add("Quantity");
@@ -122,8 +80,9 @@ namespace CafeBarOrderingSystem
             newOrderListView.Items.Add(new ListViewItem(""));
 
 
-            if (order.footer.SubItems[0].Text.StartsWith("Pending:"))
+            if (order.footer.SubItems[0].Text.Contains ("Pending:"))
             {
+                newOrderListView.Items.Add(new ListViewItem($"Table number: {order.TableNumber}"));
                 ListViewItem footer = new ListViewItem($"Pending: {order.TotalWaitTime} sec");
                 footer.SubItems.Add("");
                 footer.SubItems.Add("");
@@ -133,6 +92,7 @@ namespace CafeBarOrderingSystem
             }
             else
             {
+                newOrderListView.Items.Add(new ListViewItem($"Table number: {order.TableNumber}"));
                 ListViewItem footer = new ListViewItem($"Finished: {order.TotalWaitTime} sec");
                 footer.SubItems.Add("");
                 footer.SubItems.Add("");
@@ -172,7 +132,7 @@ namespace CafeBarOrderingSystem
             }
             
         }
-        private void ListView_Click(object sender, EventArgs e) //<-better way for selection if possible 
+        private void ListView_Click(object sender, EventArgs e)
         {
             if(sender is ListView selectedListview)
             {
