@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CafeBarOrderingSystem
@@ -19,7 +13,7 @@ namespace CafeBarOrderingSystem
             Rows = CurrentOrder;
             this.tableNumber = tableNumber;
             InitializeComponent();
-            
+
         }
 
         private void View_Order_Load(object sender, EventArgs e)
@@ -58,9 +52,9 @@ namespace CafeBarOrderingSystem
         {
             if (lvProductRows.SelectedItems.Count > 0)
             {
-                
+
                 Rows.RemoveAll(row => row.product.name == lvProductRows.SelectedItems[0].Text);
-                
+
                 Make_order.Instance_MakeOrder.ProductsForOrder.RemoveAll(x => x.product.name == lvProductRows.SelectedItems[0].Text);
                 lvProductRows.SelectedItems[0].Remove();
                 InitiallizeMenu();

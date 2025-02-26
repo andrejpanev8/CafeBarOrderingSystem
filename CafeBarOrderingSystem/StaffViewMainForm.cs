@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CafeBarOrderingSystem
@@ -80,7 +77,7 @@ namespace CafeBarOrderingSystem
             newOrderListView.Items.Add(new ListViewItem(""));
 
 
-            if (order.footer.SubItems[0].Text.Contains ("Pending:"))
+            if (order.footer.SubItems[0].Text.Contains("Pending:"))
             {
                 newOrderListView.Items.Add(new ListViewItem($"Table number: {order.TableNumber}"));
                 ListViewItem footer = new ListViewItem($"Pending: {order.TotalWaitTime} sec");
@@ -124,19 +121,20 @@ namespace CafeBarOrderingSystem
             if (caller == false)
             {
                 FinishedOrders.panelFinishedOrders.Controls.Add(newOrderListView);
-            } else
+            }
+            else
             {
                 newOrderListView.Click += ListView_Click;
                 layoutPanel.Controls.Add(newOrderListView);
                 order.lvOrder = newOrderListView;
             }
-            
+
         }
         private void ListView_Click(object sender, EventArgs e)
         {
-            if(sender is ListView selectedListview)
+            if (sender is ListView selectedListview)
             {
-                for(int i = 0; i < currentOrders.Count(); i++)
+                for (int i = 0; i < currentOrders.Count(); i++)
                 {
                     if (currentOrders[i].lvOrder.Equals(selectedListview))
                     {
@@ -150,8 +148,8 @@ namespace CafeBarOrderingSystem
 
         public void DisplayOrders()
         {
-            layoutPanel.Controls.Clear();   
-            foreach(Order order in currentOrders)
+            layoutPanel.Controls.Clear();
+            foreach (Order order in currentOrders)
             {
                 UpdateOrders(order, true);
             }
